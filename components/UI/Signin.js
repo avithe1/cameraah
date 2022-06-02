@@ -7,6 +7,7 @@ const EmailForm = ({ onEmailSubmit, disabled }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setEmail("")
     onEmailSubmit(email);
   };
 
@@ -30,7 +31,7 @@ const EmailForm = ({ onEmailSubmit, disabled }) => {
             //leadingIcon={MonochromeIcons.PaperPlane}
             //color='primary'
             //size='sm'
-            //disabled={disabled}
+            disabled={!email.length}
             onClick={handleSubmit}
             className={classes.loginbutton}
           >
