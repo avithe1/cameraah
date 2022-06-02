@@ -3,9 +3,11 @@ import { UserContext } from '../../lib/UserContext';
 import EmailForm from '../../components/UI/Signin';
 import { magic } from '../../lib/magic';
 import Admin from '../../components/UI/Admin';
+import { useRouter } from 'next/router';
 
 const Login = () => {
     const [user, setUser] = useContext(UserContext);
+    const router = useRouter();
 
     async function handleLoginWithEmail(email) {
         try {
@@ -30,7 +32,7 @@ const Login = () => {
                 // Set the UserContext to the now logged in user
                 let userMetadata = await magic.user.getMetadata();
                 await setUser(userMetadata);
-                //Router.push('/profile');
+                router.reload();
             }
         } catch (error) {
             //setDisabled(false); // re-enable login button - user may have requested to edit their email
@@ -39,7 +41,13 @@ const Login = () => {
     }
 
     return (
-        <>{user?.loading ? "Loading..." : user?.issuer ? <Admin/> : <EmailForm onEmailSubmit={handleLoginWithEmail} />}</>
+        <div style={{  width: "100%", backgroundColor:"yellow" }}>{
+            user?.loading ?
+                "Loading..."
+                : user?.issuer ?
+                    <Admin />
+                    : <EmailForm onEmailSubmit={handleLoginWithEmail} />}
+        </div>
     )
 
 }

@@ -30,7 +30,7 @@ const Layout = ({ children }) => {
                     <link rel="icon" href="/favicon.ico" />
                 </Head>
                 <Header />
-                <div>{children}</div>
+                <div style={{width:"100%",marginTop:"4px"}}>{children}</div>
                 <Footer />
             </UserContext.Provider>
         </>

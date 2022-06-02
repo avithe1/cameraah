@@ -1,9 +1,16 @@
 import Layout from '../components/UI/Layout'
+import './style.css'
+
+import Head from "next/head";
+import { config, dom } from "@fortawesome/fontawesome-svg-core";
+config.autoAddCss = false;
 
 export default function MyApp({ Component, pageProps }) {
 
   return (
     <main>
+
+      <Head><style>{dom.css()}</style></Head>
 
       <Layout className="container">
         <Component {...pageProps} />

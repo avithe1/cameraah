@@ -1,0 +1,280 @@
+.app__container {
+    /*height: calc(100vh - 55px);*/
+    display: flex;
+}
+
+/* SIDEBAR */
+.sidebar {
+    background-color: #10171A;
+    width: 75px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.menu {}
+
+.menu__button:first-child {
+    margin-top: 100px;
+}
+
+.menu__button {
+    padding: 19px 0;
+    color: rgba(255, 255, 255, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    transition: all 0.4s;
+    animation: fade-in-from-left 0.5s;
+}
+
+.menu__button:hover {
+    background-color: #2B363B;
+    color: #fff;
+    cursor: pointer;
+}
+
+.menu__button:focus {
+    background-color: #2B363B;
+    color: #fff;
+    cursor: pointer;
+}
+
+.menu__button--active {
+    background-color: #2B363B;
+    color: #fff;
+    position: relative;
+}
+
+.menu__button--active::before {
+    content: '';
+    width: 3px;
+    height: 100%;
+    background-color: #375BB6;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.menu__icon {
+    font-size: 18px;
+    margin-bottom: 3px;
+}
+
+.menu__text {
+    font-weight: 500;
+    font-size: 12px;
+}
+
+
+/*---------- SIDEBAR -------------*/
+
+
+.main {
+    background-color: #2B363C;
+    flex: 1;
+}
+
+.main_container {
+    display: flex;
+    flex-direction: column;
+}
+
+.main_top {
+    display: flex;
+    margin: 30px 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dashtext {
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+
+.searchbox {
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    color: #a0d18c;
+    width: 250px;
+    height: 30px;
+    padding-left: 10px;
+}
+
+.searchbox:focus {
+    outline: none;
+    color: #2d9fd9;
+}
+
+.main_cards {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 60px;
+    flex-wrap: wrap;
+}
+
+.cardcontainer {
+    background-color: #EDF1F3;
+    color: black;
+    border-radius: 7px;
+    padding: 15px 30px;
+    width: 160px;
+    margin: 5px 5px;
+    cursor: pointer;
+}
+
+.cardtext {
+    color: darkgray;
+    font-size: 12px;
+}
+
+.carddollar {
+    color: black;
+    font-weight: bold;
+}
+
+.main_graph {
+    display: flex;
+    flex-direction: column;
+    margin: 60px 50px;
+}
+
+.graphheading {
+    display: flex;
+    justify-content: space-between;
+}
+
+.graphheadingleft {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+}
+
+.graphheadingright {
+    font-size: 12px;
+    color: lightgray;
+}
+
+.graph {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    border-left: 1px solid darkgray;
+    border-bottom: 1px solid darkgray;
+}
+
+.graphbar {
+    background-color: darkslategrey;
+    height: 180px;
+    width: 30px;
+}
+
+.main_history {
+    display: flex;
+    flex-direction: column;
+    margin: 60px 50px;
+}
+
+.historysmall {
+    font-size: 12px;
+    color: darkgray;
+}
+
+/* ---------------- */
+
+.panel {
+    background-color: #EDF1F3;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+.paneliconscontainer {
+    display: flex;
+    margin: 20px 20px;
+    justify-content: flex-end;
+}
+
+
+.panelicon {
+    color: darkgray;
+    margin: 0px 10px;
+    cursor: pointer;
+}
+
+.panelicon:hover{
+    color:lightblue;
+}
+
+
+.list-group {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #ccc;
+    border-radius: .5em;
+    width: 15em;
+    margin-top: 10px;
+}
+
+.list-group li {
+    border-top: 1px solid #ccc;
+    padding: .5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.list-group li:first-child {
+    border-top: 0;
+}
+
+.list-group .badge {
+    background-color: rebeccapurple;
+    color: #fff;
+    font-weight: bold;
+    font-size: 80%;
+    border-radius: 10em;
+    min-width: 1.5em;
+    padding: .25em;
+    text-align: center
+}
+
+.recentcontainer{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.upcomingcontainer{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.panelheading{
+    color: darkgray;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+@media (max-width:1200px) {
+    .panel{
+        display: none;
+    }
+}
+
+@media (max-width:600px) {
+    .sidebar{
+        display: none;
+    }
+}

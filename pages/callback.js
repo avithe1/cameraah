@@ -3,6 +3,7 @@ import Router, { useRouter } from 'next/router';
 import { magic } from '../lib/magic';
 import { UserContext } from '../lib/UserContext';
 //import Loading from '../components/loading';
+import Admin from '../components/UI/Admin';
 
 const Callback = () => {
     const router = useRouter();
@@ -43,7 +44,7 @@ const Callback = () => {
         }
     };
 
-    return <p>Loading...</p>;
+    return <>{user?.loading ? "Loading..." : user?.issuer ? <Admin/> : "Not signed in"}</>;
 };
 
 export default Callback;
