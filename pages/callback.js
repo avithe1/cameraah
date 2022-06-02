@@ -44,7 +44,7 @@ const Callback = () => {
         }
     };
 
-    return <>{user?.loading ? "Loading..." : user?.issuer ? <Admin/> : "Not signed in"}</>;
+    return <>{user?.loading ? <p>Checking authentication...</p> : user?.issuer ? <Admin /> : "Not signed in"}</>;
 };
 
 export default Callback;

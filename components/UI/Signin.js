@@ -21,15 +21,17 @@ const EmailForm = ({ onEmailSubmit, disabled }) => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             //prefix={<Icon inline type={MonochromeIcons.Envelope} size={22} />}
+            className="emailinput"
           />
         </div>
         <div>
           <button
             //leadingIcon={MonochromeIcons.PaperPlane}
-            color='primary'
+            //color='primary'
             //size='sm'
-            disabled={disabled}
+            //disabled={disabled}
             onClick={handleSubmit}
+            className="loginbutton"
           >
             Send Magic Link
           </button>
@@ -49,6 +51,22 @@ const EmailForm = ({ onEmailSubmit, disabled }) => {
         .input-wrapper {
           width: 80%;
           margin: 0 auto 20px;
+        }
+        .loginbutton{
+          background-color:blue;
+          width:200px;
+          height:35px;
+          color:white;
+          border-radius:7px;
+          cursor:pointer;
+          margin:10px 20px;
+        }
+        .emailinput{
+          border-radius: 20px;
+          color: black;
+          width: 300px;
+          height: 40px;
+          padding-left: 10px;
         }
       `}</style>
     </>

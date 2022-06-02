@@ -111,9 +111,9 @@ const Admin = () => {
             <main className={classes.panel}>
 
                 <div className={classes.paneliconscontainer}>
-                    <div clasName={classes.paneliconbox}><FontAwesomeIcon icon={faCalendar} className={classes.panelicon} size="lg" /></div>
-                    <div clasName={classes.paneliconbox}><FontAwesomeIcon icon={faBell} className={classes.panelicon} size="lg" /></div>
-                    <div clasName={classes.paneliconbox}><FontAwesomeIcon icon={faUser} className={classes.panelicon} size="lg" /></div>
+                    <div className={classes.paneliconbox}><FontAwesomeIcon icon={faCalendar} className={classes.panelicon} size="lg" /></div>
+                    <div className={classes.paneliconbox}><FontAwesomeIcon icon={faBell} className={classes.panelicon} size="lg" /></div>
+                    <div className={classes.paneliconbox}><FontAwesomeIcon icon={faUser} className={classes.panelicon} size="lg" /></div>
                 </div>
 
                 <div className={classes.creditcardcontainer}>

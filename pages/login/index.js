@@ -16,7 +16,7 @@ const Login = () => {
             // Trigger Magic link to be sent to user
             let didToken = await magic.auth.loginWithMagicLink({
                 email,
-                redirectURI: new URL('/callback', window.location.origin).href, // optional redirect back to your app after magic link is clicked
+                //redirectURI: new URL('/callback', window.location.origin).href, // optional redirect back to your app after magic link is clicked
             });
 
             // Validate didToken with server
@@ -32,7 +32,6 @@ const Login = () => {
                 // Set the UserContext to the now logged in user
                 let userMetadata = await magic.user.getMetadata();
                 await setUser(userMetadata);
-                router.reload();
             }
         } catch (error) {
             //setDisabled(false); // re-enable login button - user may have requested to edit their email
@@ -41,9 +40,9 @@ const Login = () => {
     }
 
     return (
-        <div style={{  width: "100%", backgroundColor:"yellow" }}>{
+        <div style={{ width: "100%" }}>{
             user?.loading ?
-                "Loading..."
+                <p>Checking authentication...</p>
                 : user?.issuer ?
                     <Admin />
                     : <EmailForm onEmailSubmit={handleLoginWithEmail} />}

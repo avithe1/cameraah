@@ -42,7 +42,7 @@ const CameraahHeader = () => {
 
             </div>
             <div className={classes.containerright}>
-                <>{user?.loading ? "Wait..." : user?.issuer ? <button className={classes.signinbutton} onClick={logout}>Log out</button> : null}</>
+                <>{user?.loading ? "..." : user?.issuer ? <button className={classes.signinbutton} onClick={logout}>Log out</button> : null}</>
             </div>
         </div>
     )
