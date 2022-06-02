@@ -46,7 +46,7 @@ const Weather = () => {
                     }
                     if (res.weather) {
                         data.weather = res.weather[0].main;
-                        data.icon = "http://openweathermap.org/img/wn/" + res.weather[0].icon + "@2x.png";
+                        data.icon = "https://openweathermap.org/img/wn/" + res.weather[0].icon + "@2x.png";
                         data.icontooltip = res.weather[0].description;
                     }
                     setError(null);

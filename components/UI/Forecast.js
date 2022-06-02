@@ -22,7 +22,7 @@ const Forecast = ({ city }) => {
 
     const handleCity = () => {
         //api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}
-        fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&APPID=eb3dda6cd7b142c7155cd16eae583c97`)
+        fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&APPID=eb3dda6cd7b142c7155cd16eae583c97`)
             .then(res => res.json())
             .then(res => {
                 //console.log(res);
