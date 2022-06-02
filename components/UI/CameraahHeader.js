@@ -1,10 +1,25 @@
 import Image from "next/image";
 import classes from './CameraahHeader.module.css';
-import { useRouter } from 'next/router';
 import Link from "next/link";
+import { useContext } from 'react';
+import { UserContext } from '../../lib/UserContext';
+import { magic } from "../../lib/magic";
 
 const CameraahHeader = () => {
-    const router = useRouter();
+    const [user, setUser] = useContext(UserContext);
+
+
+    const logout =  async () => {
+        try {
+            await magic.user.logout();
+            console.log(await magic.user.isLoggedIn()); // => `false`
+            setUser({ user: null });
+        } catch {
+            // Handle errors if required!
+        }
+    }
+
+
     return (
         <div className={classes.headercontainer}>
             <div className={classes.containerleft}>
@@ -27,7 +42,7 @@ const CameraahHeader = () => {
 
             </div>
             <div className={classes.containerright}>
-                <button className={classes.signinbutton}>Log in</button>
+                <>{user?.loading ? "Wait..." : user?.issuer ? <button className={classes.signinbutton} onClick={logout}>Log out</button> : null}</>
             </div>
         </div>
     )
