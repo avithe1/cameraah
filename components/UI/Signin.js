@@ -1,5 +1,6 @@
 import { useState } from 'react';
 //import { Input, Icon, MonochromeIcons, CallToAction } from '@magiclabs/ui';
+import classes from './Signin.module.css'
 
 const EmailForm = ({ onEmailSubmit, disabled }) => {
   const [email, setEmail] = useState('');
@@ -21,7 +22,7 @@ const EmailForm = ({ onEmailSubmit, disabled }) => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             //prefix={<Icon inline type={MonochromeIcons.Envelope} size={22} />}
-            className="emailinput"
+            className={classes.emailinput}
           />
         </div>
         <div>
@@ -31,7 +32,7 @@ const EmailForm = ({ onEmailSubmit, disabled }) => {
             //size='sm'
             //disabled={disabled}
             onClick={handleSubmit}
-            className="loginbutton"
+            className={classes.loginbutton}
           >
             Send Magic Link
           </button>
@@ -51,22 +52,6 @@ const EmailForm = ({ onEmailSubmit, disabled }) => {
         .input-wrapper {
           width: 80%;
           margin: 0 auto 20px;
-        }
-        .loginbutton{
-          background-color:blue;
-          width:200px;
-          height:35px;
-          color:white;
-          border-radius:7px;
-          cursor:pointer;
-          margin:10px 20px;
-        }
-        .emailinput{
-          border-radius: 20px;
-          color: black;
-          width: 300px;
-          height: 40px;
-          padding-left: 10px;
         }
       `}</style>
     </>

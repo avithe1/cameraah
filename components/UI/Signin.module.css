@@ -1,0 +1,27 @@
+.emailinput {
+    border-radius: 20px;
+    color: black;
+    width: 300px;
+    height: 40px;
+    padding-left: 10px;
+}
+
+.loginbutton {
+    background-color: blue;
+    width: 200px;
+    height: 35px;
+    color: white;
+    border-radius: 7px;
+    cursor: pointer;
+    margin: 10px 20px;
+}
+
+@media (max-width:400px) {
+    .emailinput {
+        width: 150px;
+    }
+
+    .loginbutton {
+        width: 150px;
+    }
+}
