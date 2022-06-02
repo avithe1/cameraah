@@ -1,0 +1,66 @@
+.headercontainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-shadow: 0px 0px 7px #888888;
+    height: 80px;
+}
+
+.containerleft {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 30px;
+    align-items: center;
+}
+
+.navlinks {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 30px;
+}
+
+.containerright {
+    display: flex;
+    margin: 10px 30px;
+    align-items: center;
+}
+
+.navtext {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.headerimage {
+    margin-right: 50px;
+}
+
+.signinbutton {
+    width: 120px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background-color: #000;
+    font-family: Eina, sans-serif;
+    color: #fff;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 400;
+    text-align: center;
+    cursor: pointer;
+}
+
+.signinbutton:hover {
+    font-weight: 600;
+}
+
+@media (max-width:1200px) {
+    .navlinks {
+        display: none;
+    }
+}
+
+@media (max-width:500px) {
+    .signinbutton {
+        display: none;
+    }
+}

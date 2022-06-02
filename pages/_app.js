@@ -1,42 +1,18 @@
-import Head from 'next/head'
-import { useRouter } from 'next/router';
+import Layout from '../components/UI/Layout'
 
-export default function Home() {
-  const router = useRouter();
-
+export default function MyApp({ Component, pageProps }) {
 
   return (
-    <div className="container">
-      <Head>
-        <title>Cameraah</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <main>
 
-      <main>
-        <h1 className="title">
-          Welcome to <a href="https://www.cameraah.com/">Cameraah</a>
-        </h1>
+      <Layout className="container">
+        <Component {...pageProps} />
+      </Layout>
 
-        <p className="description">
-          Choose a demo
-        </p>
-
-        <div className="grid" >
-          <span className="card" onClick={() => router.push("/weather")}>
-            <h3>Weather API &rarr;</h3>
-            <p>A simple demo that demonstrates integration with a weather API.</p>
-          </span>
-
-          <span className="card" onClick={() => router.push("/login")}>
-            <h3>Magic Login &rarr;</h3>
-            <p>Login to Cameraah using the Magic SDK</p>
-          </span>
-        </div>
-      </main>
 
       <style jsx>{`
         .container {
-          //min-height: 100vh;
+          min-height: 100vh;
           padding: 0 0.5rem;
           display: flex;
           flex-direction: column;
@@ -45,7 +21,7 @@ export default function Home() {
         }
 
         main {
-          padding: 5rem 0;
+          //padding: 2rem 0;
           flex: 1;
           display: flex;
           flex-direction: column;
@@ -180,6 +156,7 @@ export default function Home() {
           box-sizing: border-box;
         }
       `}</style>
-    </div>
+    </main>
   )
 }
+

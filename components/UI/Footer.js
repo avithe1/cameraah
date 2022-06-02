@@ -1,42 +1,17 @@
-import Head from 'next/head'
-import { useRouter } from 'next/router';
+const Footer = () => {
+    return (
+        <footer>
+            <a
+                href="https://www.linkedin.com/in/avinashrathod/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Made with ❤️ by Avinash.
+            </a>
 
-export default function Home() {
-  const router = useRouter();
-
-
-  return (
-    <div className="container">
-      <Head>
-        <title>Cameraah</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main>
-        <h1 className="title">
-          Welcome to <a href="https://www.cameraah.com/">Cameraah</a>
-        </h1>
-
-        <p className="description">
-          Choose a demo
-        </p>
-
-        <div className="grid" >
-          <span className="card" onClick={() => router.push("/weather")}>
-            <h3>Weather API &rarr;</h3>
-            <p>A simple demo that demonstrates integration with a weather API.</p>
-          </span>
-
-          <span className="card" onClick={() => router.push("/login")}>
-            <h3>Magic Login &rarr;</h3>
-            <p>Login to Cameraah using the Magic SDK</p>
-          </span>
-        </div>
-      </main>
-
-      <style jsx>{`
+            <style jsx>{`
         .container {
-          //min-height: 100vh;
+          min-height: 100vh;
           padding: 0 0.5rem;
           display: flex;
           flex-direction: column;
@@ -166,7 +141,7 @@ export default function Home() {
         }
       `}</style>
 
-      <style jsx global>{`
+            <style jsx global>{`
         html,
         body {
           padding: 0;
@@ -180,6 +155,8 @@ export default function Home() {
           box-sizing: border-box;
         }
       `}</style>
-    </div>
-  )
+        </footer>
+    )
 }
+
+export default Footer;
