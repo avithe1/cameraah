@@ -21,3 +21,15 @@
     min-width:300px;
     animation:slidein 1s;
 }
+
+.inputsection {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width:450px) {
+    .inputsection{
+        flex-direction: column;
+    }
+}

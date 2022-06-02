@@ -65,7 +65,7 @@ const Weather = () => {
         <div className="main">
             <div><h1>Weather API</h1></div>
 
-            <div>
+            <div className={classes.inputsection}>
                 <input className="weatherinput" type="text" value={city} onChange={(e) => setCity(e.target.value)} placeholder="Enter name of a city" ref={inputElement} />
                 <button className={city.length ? "weatherbutton" : "weatherbutton--disabled"} onClick={handleCity} disabled={!city.length}>Get weather</button>
             </div>
@@ -124,6 +124,7 @@ const Weather = () => {
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            margin: 0px 20px;
          }
 
         .error {
