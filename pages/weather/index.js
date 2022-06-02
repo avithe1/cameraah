@@ -33,7 +33,7 @@ const Weather = () => {
 
     const handleCity = () => {
         setCurrentCity(city);
-        fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=${process.env.NEXT_PUBLIC_WEATHERKEY}`)
+        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=${process.env.NEXT_PUBLIC_WEATHERKEY}`)
             .then(res => res.json())
             .then(res => {
                 if (res.cod == '404') {
@@ -180,7 +180,7 @@ const Weather = () => {
           .reset {
               margin-top:10px;
               cursor:pointer;
-              color:red;
+              color:blue;
           }
 
           .temperature {
